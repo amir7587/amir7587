@@ -51,7 +51,7 @@ void *map(void *var){
     else{
         printf("Thread [%3d] with  PID [%3d] \n",tid,id+MIN_PID);     
         int stime=1+rand()%30;
-        sleep(stime);
+        sleep(stime); //here you can check the output of the program by commenting the sleep and check the output
         printf("Thread [%3d] PID [%3d] Releasing this after  %d seconds\n",tid,id+MIN_PID,stime);
         release_pid(id);
     }
