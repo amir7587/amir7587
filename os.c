@@ -51,7 +51,7 @@ void *map(void *var){
     else{
         printf("Thread [%3d] with  PID [%3d] \n",tid,id+MIN_PID);     
         int stime=1+rand()%30;
-       // sleep(stime);
+        sleep(stime);
         printf("Thread [%3d] PID [%3d] Releasing this after  %d seconds\n",tid,id+MIN_PID,stime);
         release_pid(id);
     }
@@ -71,6 +71,6 @@ int main(){
 
     for(i=0; i<100; i++)
         pthread_join(process[i],NULL);
-    //wait(NULL);
+    wait(NULL);
     return printf("\n****************COMPLETED***************\n");
 }
