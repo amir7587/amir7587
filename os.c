@@ -71,6 +71,6 @@ int main(){
 
     for(i=0; i<100; i++)
         pthread_join(process[i],NULL);
-    wait(NULL);
+    wait(NULL); //you can also comment the wait and check the output
     return printf("\n****************COMPLETED***************\n");
 }
